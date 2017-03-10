@@ -25,7 +25,7 @@ SECRET_KEY = 'f&w!v6)q4s93jvrap_^%e1za&5&^r5@m776dt2d7*(m&d*3m@4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'zhihuApp',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -75,10 +76,14 @@ WSGI_APPLICATION = 'CloneZhiHu.wsgi.application'
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+	'default': {
+		'ENGINE': 'django.db.backends.mysql',
+		'NAME': 'zhihudb',
+		'USER':'root',
+		'PASSWORD':'mysql',
+		'HOST':'localhost',
+		'PORT':'3306',
+	}
 }
 
 
