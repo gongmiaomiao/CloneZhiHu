@@ -1,0 +1,157 @@
+body{
+	color: #555;
+	font-size: 15px;
+	line-height: 1.7;
+	font-family: 'Helvetica Neue',Helvetica,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;
+	background: #f7fafc;
+}
+html,body{
+	height: 100%;
+}
+body,ul,ol,li,p,h1,h2,h3,h4,h5{
+	margin: 0;
+	padding: 0;
+}
+/*布局标签*/
+/*div{
+	border: 1px dashed blue;
+}*/
+.index-main{
+	min-height: 720px;
+	margin-bottom: -42px;
+}
+.index-main-body{
+	padding: 0;
+	margin: auto;
+	min-height: 590px;
+	width: 300px;
+}
+.index-header{
+	padding-top: 40px;
+	text-align: center;
+}
+.index-header .logo{
+	margin: 0 auto;
+	width: 160px;
+	height: 74px;
+	background: url(zhihuImg/logo.6837e927.png);
+}
+.hide-text{
+	color: transparent;
+}
+.index-header .subtitle{
+	margin: 30px 0px 20px 0px;
+	font-size: 18px;
+	line-height: 1;
+	font-weight: 400;
+}
+.index-tab-navs{
+	margin-bottom: 10px;
+	font-size: 18px;
+	text-align: center;
+}
+a{
+	text-decoration: none;
+}
+
+.index-tab-navs .navs-slider{
+	position: relative;
+	display: inline-block;
+}
+.index-tab-navs a{
+	width: 4em;
+	line-height: 35px;
+	float: left;
+	-webkit-transition: opacity .15s, color .15s;
+	transition: opacity .15s, color .15s;
+}
+
+.index-tab-navs a.active{
+	opacity: 1;
+	color: #0f88eb;
+}
+
+.index-tab-navs .navs-slider .navs-slider-bar{
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	margin: 0 .8em;
+	width: 2.4em;
+	height: 2px;
+	background: #0f88eb;
+	transition: left .15s ease-in;
+}
+
+.sign-flow .view .group-inputs{
+	padding: 1px 0;
+	border: 1px solid #d5d5d5;
+	border-radius: 3px;
+}
+
+.sign-flow .view .input-wrapper{
+	position: relative;
+	margin: 0;
+	overflow: hidden;
+
+
+}
+
+
+.sign-flow .view .input-wrapper + .input-wrapper{
+	border-top: 1px solid #d5d5d5;
+}
+
+
+.sign-flow .view .button-wrapper{
+	margin-top: 18px;
+}
+
+.sign-flow .view .input-wrapper input{
+	border: 0;
+	border-radius: 0;
+	box-shadow: 0;
+	background: #fff;
+	padding: 1em .8em;
+	width: 100%;
+	box-sizing: border-box;
+	margin: 0;
+	line-height: 19px;
+	color: #555;
+}
+
+
+input{
+	font-size: 100%;
+}
+
+.sign-flow .sign-button{
+	background:#0f88eb;
+	box-shadow: none;
+	border: 0;
+	border-radius: 3px;
+	line-height: 41px;
+	color: #fff;
+	display: block;
+	padding: 0;
+	width: 100%;
+	font-size: 15px;
+	text-align: center;
+	text-shadow: 0 1px 1px rgba(0,0,0,.2);
+	outline: 0;
+	cursor: pointer;
+}
+
+
+.view-signup{
+	visibility:  none;
+}
+
+
+
+
+
+
+
+
+
+
