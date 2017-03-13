@@ -3,7 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<title>知乎 - 与世界分享你的知识、经验和见解</title>
-	<link rel="stylesheet" type="text/css" href="zhihu_com.css">
+	{% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'home.css'%}"/>
 </head>
 <body>
 	<div class="index-main">
@@ -57,6 +58,7 @@
 		</div>
 	</div>
 	<div class="footer"></div>
-	<script src="zhihu_com.js"></script>
+	 {% load staticfiles %}
+	<script src="{% static 'home.js' %}"></script>
 </body>
 </html>
