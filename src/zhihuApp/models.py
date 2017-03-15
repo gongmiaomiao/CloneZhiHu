@@ -17,3 +17,13 @@ class Question(models.Model):
 	title = models.CharField(max_length=100)
 	content = models.CharField(max_length=300)
 	release_date = models.DateField()
+	
+	def __unicode__(self):
+		return self.title
+
+class Answers(models.Model):
+	user = models.ForeignKey(User)
+	question = models.ForeignKey(Question)
+	content = models.CharField(max_length=300)
+	release_date = models.DateField()
+	
