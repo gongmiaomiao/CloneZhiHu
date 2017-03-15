@@ -27,3 +27,6 @@ class Answers(models.Model):
 	content = models.CharField(max_length=300)
 	release_date = models.DateField()
 	
+	def __unicode__(self):
+		return self.question
+	
