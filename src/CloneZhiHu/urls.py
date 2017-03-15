@@ -19,8 +19,8 @@ from zhihuApp import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
 #     url(r'^home/', views.home, name= 'home'),
-    url(r'^home/signin', views.signin, name= 'signin'),
-    url(r'^people/(?P<user_id>\d+.*)',views.people,name='people'), 
-    url(r'^asks/(?P<user_id>\d+.*)',views.asks,name='asks'), 
-    url(r'^asksdetail/(?P<user_id>\d+.*)/(?P<question_id>\d+.*)',views.asksdetail,name='asksdetail'), 
+    url(r'^home/signin',  views.signin, name= 'signin'),
+    url(r'^people/(?P<user_id>\d+.*)', views.people,name='people'), 
+    url(r'^asks/(?P<user_id>\d+.*)', views.asks,name='asks'), 
+    url(r'^asksdetail/(?P<user_id>\d+.*)/(?P<question_id>\d+.*)', views.asksdetail,name='asksdetail'), 
 ]

@@ -36,8 +36,8 @@ def asks(request,user_id):
 	if  request.method == "GET":
 		return render(request,'asks.html',ctx)
 
-def asksdetail(request,userer_id, question_id):
-	user = User.objects.get(id = userer_id)
+def asksdetail(request,user_id, question_id):
+	user = User.objects.get(id = user_id)
 	question = Question.objects.get(id = question_id)
 	
 	if  request.method == 'POST':
