@@ -11,3 +11,9 @@ class User(models.Model):
 	
 	def __unicode__(self):
 		return self.name
+
+class Question(models.Model):
+	user = models.ForeignKey(User)
+	title = models.CharField(max_length=100)
+	content = models.CharField(max_length=300)
+	release_date = models.DateField()

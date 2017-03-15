@@ -75,12 +75,14 @@
 							<h4>我的提问</h4>
 						</div>
 						<div>
+						{%for question in user_question%}
 							<div class="list-item">
 								<div class="item-title">
-									<h2><a href="">幻夜里的美冬是什么样子的人？</a></h2>
+									<h2><a href="">{{question.title}}</a></h2>
 								</div>
-								<div class="item-statistic">时间</div>
+								<div class="item-statistic">{{question.release_date}}</div>
 							</div>
+						{% endfor %}
 						</div>
 					</div>
 				</div>
