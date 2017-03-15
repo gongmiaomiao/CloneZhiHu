@@ -21,4 +21,5 @@ urlpatterns = [
 #     url(r'^home/', views.home, name= 'home'),
     url(r'^home/signin', views.signin, name= 'signin'),
     url(r'^people/(?P<user_id>\d+.*)',views.people,name='people'), 
+    url(r'^asks/(?P<user_id>\d+.*)',views.asks,name='asks'), 
 ]

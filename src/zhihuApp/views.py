@@ -28,3 +28,9 @@ def people(request,user_id):
 	ctx = {'user':user, 'user_question':user.question_set.all()}
 	if  request.method == "GET":
 		return render(request,'people.html',ctx)
+	
+def asks(request,user_id):
+	user = User.objects.get(id = user_id)
+	ctx = {'user':user, 'user_question':user.question_set.all()}
+	if  request.method == "GET":
+		return render(request,'asks.html',ctx)
