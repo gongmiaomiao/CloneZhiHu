@@ -15,7 +15,7 @@ class User(models.Model):
 class Question(models.Model):
 	user = models.ForeignKey(User)
 	title = models.CharField(max_length=100)
-	content = models.CharField(max_length=300)
+	content = models.TextField()
 	release_date = models.DateField()
 	
 	def __unicode__(self):
@@ -24,9 +24,9 @@ class Question(models.Model):
 class Answers(models.Model):
 	user = models.ForeignKey(User)
 	question = models.ForeignKey(Question)
-	content = models.CharField(max_length=300)
+	content = models.TextField()
 	release_date = models.DateField()
 	
 	def __unicode__(self):
-		return self.question
+		return self.content
 	

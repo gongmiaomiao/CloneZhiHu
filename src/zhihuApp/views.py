@@ -49,5 +49,5 @@ def asksdetail(request,userer_id, question_id):
 		addans.release_date = timezone.now()
 		addans.save()
 			
-	ctx = {'question':question,'answers':question.answers_set.all()}
+	ctx = {'question':question,'answers':question.answer_set.all()}
 	return  render(request,'asksdetail.html',ctx)
