@@ -21,6 +21,4 @@ urlpatterns = [
 #     url(r'^home/', views.home, name= 'home'),
     url(r'^home/signin', views.signin, name= 'signin'),
     url(r'^people/(?P<user_id>\d+.*)',views.people,name='people'), 
-    
-    url(r'^people/zhihuApp/static/upload/(?P<path>.*)', 'django.views.static.serve',{'document_root':'D:\Projects\CloneZhiHu\src\zhihuApp\static\upload'}),
 ]

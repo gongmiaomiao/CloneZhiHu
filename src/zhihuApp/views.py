@@ -19,7 +19,7 @@ def signin(request):
 		if user == None:
 			return HttpResponse("mistake input")
 		else:
-			return redirect('http://127.0.0.1:8000/people/'+str(user.id))
+			return redirect('http://www.clonezhihu.com:8000/people/'+str(user.id))
 	else:
 		return render(request, 'home.html')
 	

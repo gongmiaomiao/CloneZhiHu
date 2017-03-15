@@ -25,7 +25,7 @@ SECRET_KEY = 'f&w!v6)q4s93jvrap_^%e1za&5&^r5@m776dt2d7*(m&d*3m@4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost','139.199.207.220','clonezhihu.com','www.clonezhihu.com']
 
 
 # Application definition
@@ -76,13 +76,22 @@ WSGI_APPLICATION = 'CloneZhiHu.wsgi.application'
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
 DATABASES = {
-	'default': {
+# 	'default': {
+# 		'ENGINE': 'django.db.backends.mysql',
+# 		'NAME': 'zhihudb',
+# 		'USER':'root',
+# 		'PASSWORD':'mysql',
+# 		'HOST':'localhost',
+# 		'PORT':'3306',
+# 	}
+	
+		'default': {
 		'ENGINE': 'django.db.backends.mysql',
 		'NAME': 'zhihudb',
-		'USER':'root',
-		'PASSWORD':'mysql',
-		'HOST':'localhost',
-		'PORT':'3306',
+		'USER':'cdb_outerroot',
+		'PASSWORD':'sg13922841130()',
+		'HOST':'58c7e8f74708d.gz.cdb.myqcloud.com',
+		'PORT':'11916',
 	}
 }
 
