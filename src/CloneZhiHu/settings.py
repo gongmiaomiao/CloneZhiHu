@@ -76,23 +76,23 @@ WSGI_APPLICATION = 'CloneZhiHu.wsgi.application'
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
 DATABASES = {
-# 	'default': {
+ 	'default': {
+ 		'ENGINE': 'django.db.backends.mysql',
+ 		'NAME': 'zhihudb',
+ 		'USER':'root',
+ 		'PASSWORD':'1987zdm1124',
+ 		'HOST':'139.199.207.220',
+ 		'PORT':'3306',
+ 	}
+	
+# 		'default': {
 # 		'ENGINE': 'django.db.backends.mysql',
 # 		'NAME': 'zhihudb',
-# 		'USER':'root',
-# 		'PASSWORD':'mysql',
-# 		'HOST':'localhost',
-# 		'PORT':'3306',
+# 		'USER':'cdb_outerroot',
+# 		'PASSWORD':'sg13922841130()',
+# 		'HOST':'58c7e8f74708d.gz.cdb.myqcloud.com',
+# 		'PORT':'11916',
 # 	}
-	
-		'default': {
-		'ENGINE': 'django.db.backends.mysql',
-		'NAME': 'zhihudb',
-		'USER':'cdb_outerroot',
-		'PASSWORD':'sg13922841130()',
-		'HOST':'58c7e8f74708d.gz.cdb.myqcloud.com',
-		'PORT':'11916',
-	}
 }
 
 

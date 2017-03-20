@@ -1,7 +1,7 @@
 仿知乎。<br  />
 开发环境：腾讯云服务器Windows Server 2012 R2 数据中心版 64位中文版  <br  />
 版本： Django-1.10 + Python-2.7.13+ MySQL-5.7  <br  /> 
-[www.clonezhihu.com:8000/home/signin](www.clonezhihu.com:8000/home/signin "CloneZhiHu")<br  />
+[www.clonezhihu.com:8000](www.clonezhi hu.com:8000"CloneZhiHu")<br  />
 <br  />
 项目集成：<br  />
 +  注册，登录
