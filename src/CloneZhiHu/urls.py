@@ -22,5 +22,7 @@ urlpatterns = [
     url(r'^$',  views.signin, name= 'signin'),
     url(r'^people/(?P<user_id>\d+.*)', views.people,name='people'), 
     url(r'^asks/(?P<user_id>\d+.*)', views.asks,name='asks'), 
+    url(r'^answers/(?P<user_id>\d+.*)', views.answers,name='answers'),
+    url(r'^collections/(?P<user_id>\d+.*)', views.collections, name='collections'), 
     url(r'^asksdetail/(?P<user_id>\d+.*)/(?P<question_id>\d+.*)', views.asksdetail,name='asksdetail'), 
 ]

@@ -29,4 +29,15 @@ class Answers(models.Model):
 	
 	def __unicode__(self):
 		return self.content
+
+class Collections(models.Model):
+	user = models.ForeignKey(User)
+	question = models.ForeignKey(Question)
+	answer = models.ForeignKey(Answers)
+	
+	collectionname = models.CharField(max_length=50)
+	release_date = models.DateField()
+
+	def __unicode__(self):
+		return self.collectionname
 	

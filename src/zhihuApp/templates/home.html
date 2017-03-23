@@ -3,8 +3,10 @@
 <head>
 	<meta charset="utf-8">
 	<title>知乎 - 与世界分享你的知识、经验和见解</title>
+
 	{% load staticfiles %}
     <link rel="stylesheet" type="text/css" href="{% static 'home.css'%}"/>
+
 </head>
 <body>
 	<div class="index-main">
@@ -39,7 +41,7 @@
 						</div>
 					</form>
 				</div>
-				<div id="view-signin" class="view view-signin" style="display:none;">
+				<div id="view-signin" class="view view-signin" style="display: none;">
 					<form method="POST">
 						<div class="group-inputs">
 							<div class="account input-wrapper">
@@ -58,7 +60,9 @@
 		</div>
 	</div>
 	<div class="footer"></div>
+
 	 {% load staticfiles %}
 	<script src="{% static 'home.js' %}"></script>
+
 </body>
 </html>

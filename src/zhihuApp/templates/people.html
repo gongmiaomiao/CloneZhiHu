@@ -20,7 +20,7 @@
 					<div class="header-seacher-input">
 						<input type="text" name="" placeholder="搜索你感兴趣的内容...">
 					</div>
-					<button class="header-seacher-btn" type="submit">提问</button>
+					<button id="ask1" class="header-seacher-btn" type="button">提问</button>
 				</form>
 			</div>
 		</div>
@@ -63,10 +63,10 @@
 					<div class="profile-main-header">
 						<ul>
 							<li><a class="tabs-link" href="">动态</a></li>
-							<li><a class="tabs-link" href="">回答</a></li>
+							<li><a class="tabs-link" href="{% url 'answers' user.id %}">回答</a></li>
 							<li><a class="tabs-link" href="">分享</a></li>
 							<li><a class="tabs-link" href="{% url 'asks' user.id %}">提问</a></li>
-							<li><a class="tabs-link" href="">收藏</a></li>
+							<li><a class="tabs-link" href="{% url 'collections' user.id %}">收藏</a></li>
 							<li><a class="tabs-link" href="">关注</a></li>
 						</ul>
 					</div>
@@ -80,6 +80,7 @@
 								<div class="item-title">
 									<h2><a href="{% url 'asksdetail' user.id question.id %}">{{question.title}}</a></h2>
 								</div>
+
 								<div class="item-statistic">{{question.release_date}}</div>
 							</div>
 						{% endfor %}
@@ -91,8 +92,36 @@
 		</div>
 	</div>
 
-<!--  
-<script src="people.js"></script>
- -->
+	<div>
+		<div id="mask" class="mask">
+			<div class="ask-question">
+				<div class="ask-question-wapper">
+					<div class="ask-head">
+						<h1>写下你的问题</h1>
+						<p>描述精确的问题更容易得到解答</p>
+					</div>
+					<div class="ask-form">
+						<form method="POST">
+							<div class="ask-section">
+								<textarea required rows="2" class="input" placeholder="问题标题" name="title"></textarea>
+							</div>
+							<div class="ask-section">
+								<textarea required rows="2" class="input" placeholder="问题背景,条件等详细信息" name="content"></textarea>								
+							</div>
+							<div class="ask-form-btn">
+								<button  id="sub1" class="header-seacher-btn" type="submit" >提交问题</button>
+							</div>
+						</form>
+					</div>	
+				</div>
+			</div>
+		</div>
+	</div>
+ 
+
+ 
+	 {% load staticfiles %}
+	<script src="{% static 'people.js' %}"></script>
+
 </body>
 </html>
