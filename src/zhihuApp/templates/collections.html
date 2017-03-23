@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>{{user.name}} {{user.id}}- 知乎</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'people.css'%}"/>
+</head>
+<body>
+	<div class="header">
+		<div class="header-wapper">
+			<a class="header-logo" href="">知乎</a>
+			<nav class="header-nav">
+				<a href="">首页</a>
+				<a href="">发现</a>
+				<a href="">话题</a>
+			</nav>
+			<div class="header-seacher">
+				<form>
+					<div class="header-seacher-input">
+						<input type="text" name="" placeholder="搜索你感兴趣的内容...">
+					</div>
+					<button id="ask1" class="header-seacher-btn" type="button">提问</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="main">
+		<div class="main-wapper">
+			<div class="profile-header">
+				<div class="profile-header-usercover">
+					<div class="usercovereditor">
+						<div class="usercover-guide">
+							<div class="usercover-guide-inner">
+								<div class="usercover-guide-btncontainer">
+									<button class="dynamicbtn" type="button">上传封面图片</button>
+								</div>
+								<div class="usercover-guide-dialog"></div>
+							</div>
+							<ul class="usercover-guide-items"></ul>
+						</div>
+						<div class="usercover-colorblock"></div>
+					</div>
+				</div>
+				<div class="profile-header-wrapper">
+					<div class="profile-header-main">
+						<div class="profile-header-main-pic">
+							<img src="/static/{{user.head}}" style="width:168px; height:168px ">
+						</div>
+						<div class="profile-header-main-content">
+							<h1>{{user.name}}</h1>
+							<div class="profile-header-main-arrow"></div>
+							<div class="profile-header-main-contentfooter-btn">
+								<button type="button">编辑个人资料</button>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="profile-main">
+				<div class="profile-main-column card">
+					<div class="profile-main-header">
+						<ul>
+							<li><a class="tabs-link" href="">动态</a></li>
+							<li><a class="tabs-link" href="{% url 'answers' user.id %}">回答</a></li>
+							<li><a class="tabs-link" href="">分享</a></li>
+							<li><a class="tabs-link" href="{% url 'asks' user.id %}">提问</a></li>
+							<li><a class="tabs-link" href="{% url 'collections' user.id %}">收藏</a></li>
+							<li><a class="tabs-link" href="">关注</a></li>
+						</ul>
+					</div>
+					<div class="list">
+						<div class="list-header">
+							<h4>我的收藏夹</h4>
+						</div>
+						<div>
+						{%for collection in distinct%}
+							<div class="list-item">
+								<div class="item-title">
+									<h2>{{collection.0}}</h2>
+								</div>
+
+								<div class="item-statistic">{{collection.1}}</div>
+							</div>
+						{% endfor %}
+						</div>
+					</div>
+				</div>
+				<div class="profile-side-column card"></div>
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<div id="mask" class="mask">
+			<div class="ask-question">
+				<div class="ask-question-wapper">
+					<div class="ask-head">
+						<h1>写下你的问题</h1>
+						<p>描述精确的问题更容易得到解答</p>
+					</div>
+					<div class="ask-form">
+						<form method="POST">
+							<div class="ask-section">
+								<textarea required rows="2" class="input" placeholder="问题标题" name="title"></textarea>
+							</div>
+							<div class="ask-section">
+								<textarea required rows="2" class="input" placeholder="问题背景,条件等详细信息" name="content"></textarea>								
+							</div>
+							<div class="ask-form-btn">
+								<button  id="sub1" class="header-seacher-btn" type="submit" >提交问题</button>
+							</div>
+						</form>
+					</div>	
+				</div>
+			</div>
+		</div>
+	</div>
+ 
+
+ 
+	 {% load staticfiles %}
+	<script src="{% static 'people.js' %}"></script>
+
+</body>
+</html>
